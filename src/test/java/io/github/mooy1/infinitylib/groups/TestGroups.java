@@ -19,9 +19,9 @@ import be.seeseemelk.mockbukkit.ServerMock;
 import be.seeseemelk.mockbukkit.entity.PlayerMock;
 import io.github.mooy1.infinitylib.common.Events;
 import io.github.mooy1.infinitylib.core.MockAddon;
-import io.github.thebusybiscuit.slimefun4.api.player.PlayerProfile;
-import io.github.thebusybiscuit.slimefun4.core.guide.SlimefunGuideMode;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.api.player.PlayerProfile;
+import io.github.thebusybiscuit.slimefun5.core.guide.SlimefunGuideMode;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.MenuListener;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -74,3 +74,4 @@ class TestGroups {
     }
 
 }
+

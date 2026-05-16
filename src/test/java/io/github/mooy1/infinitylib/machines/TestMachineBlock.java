@@ -12,11 +12,11 @@ import org.junit.jupiter.api.TestMethodOrder;
 import be.seeseemelk.mockbukkit.MockBukkit;
 import io.github.mooy1.infinitylib.core.MockAddon;
 import io.github.mooy1.infinitylib.groups.SubGroup;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.implementation.SlimefunItems;
+import io.github.bakedlibs.dough.items.CustomItemStack;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -42,7 +42,7 @@ class TestMachineBlock {
         machine = new MachineBlock(new SubGroup("key", new ItemStack(Material.DIAMOND)),
                 new SlimefunItemStack("ID", Material.STONE, "name"),
                 RecipeType.ANCIENT_ALTAR, new ItemStack[0]);
-        output = new CustomItemStack(SlimefunItems.SALT, 2);
+        output = CustomItemStack.create(SlimefunItems.SALT, 2);
         input1 = SlimefunItems.COPPER_DUST;
         input2 = new ItemStack(Material.NETHERITE_BLOCK, 2);
     }
@@ -93,8 +93,8 @@ class TestMachineBlock {
         assertEquals(0, input[1].getAmount());
         assertNull(machine.getOutput(input));
 
-        input[0] = new CustomItemStack(input2, 4);
-        input[1] = new CustomItemStack(input1, 2);
+        input[0] = CustomItemStack.create(input2, 4);
+        input[1] = CustomItemStack.create(input1, 2);
 
         out = machine.getOutput(input);
 
@@ -107,3 +107,4 @@ class TestMachineBlock {
     }
 
 }
+

@@ -4,9 +4,6 @@ import java.util.function.Consumer;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import lombok.AccessLevel;
-import lombok.NoArgsConstructor;
-
 import org.bukkit.Bukkit;
 import org.bukkit.event.Event;
 import org.bukkit.event.EventPriority;
@@ -20,8 +17,9 @@ import io.github.mooy1.infinitylib.core.AbstractAddon;
  * @author Mooy1
  */
 @ParametersAreNonnullByDefault
-@NoArgsConstructor(access = AccessLevel.PRIVATE)
 public final class Events implements Listener {
+
+    private Events() {}
 
     private static final Listener LISTENER = new Events();
 

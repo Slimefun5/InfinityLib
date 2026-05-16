@@ -7,7 +7,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 
-import io.github.thebusybiscuit.slimefun4.libraries.dough.common.ChatColors;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.common.ChatColors;
 
 @ParametersAreNonnullByDefault
 final class HelpCommand extends SubCommand {
@@ -36,3 +36,4 @@ final class HelpCommand extends SubCommand {
     }
 
 }
+

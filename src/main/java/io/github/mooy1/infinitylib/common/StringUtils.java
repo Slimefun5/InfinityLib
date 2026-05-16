@@ -1,9 +1,8 @@
 package io.github.mooy1.infinitylib.common;
 
-import lombok.experimental.UtilityClass;
+public final class StringUtils {
 
-@UtilityClass
-public class StringUtils {
+    private StringUtils() {}
 
     public static boolean isBlank(String string) {
         // Is default blank if null or length = 0

@@ -4,17 +4,16 @@ import java.text.DecimalFormat;
 
 import javax.annotation.Nonnull;
 
-import lombok.experimental.UtilityClass;
-
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
 
 /**
  * Collection of common for building item lore
  *
  * @author Mooy1
  */
-@UtilityClass
 public final class MachineLore {
+
+    private MachineLore() {}
 
     private static final DecimalFormat FORMAT = new DecimalFormat("###,###,###,###,###,###.#");
     private static final double TPS = 20D / Slimefun.getTickerTask().getTickRate();
@@ -51,3 +50,4 @@ public final class MachineLore {
     }
 
 }
+

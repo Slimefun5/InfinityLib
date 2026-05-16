@@ -4,28 +4,28 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import lombok.experimental.UtilityClass;
-
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.persistence.PersistentDataType;
 
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
 
-@UtilityClass
 @ParametersAreNonnullByDefault
 public final class StackUtils {
+
+    private StackUtils() {}
 
     private static final NamespacedKey ID_KEY = Slimefun.getItemDataService().getKey();
 
     @Nullable
     public static String getId(ItemStack item) {
-        if (item instanceof SlimefunItemStack) {
-            return ((SlimefunItemStack) item).getItemId();
+        SlimefunItem sfItem = SlimefunItem.getByItem(item);
+        if (sfItem != null) {
+            return sfItem.getId();
         } else if (item.hasItemMeta()) {
             return getId(item.getItemMeta());
         } else {
@@ -40,8 +40,9 @@ public final class StackUtils {
 
     @Nonnull
     public static String getIdOrType(ItemStack item) {
-        if (item instanceof SlimefunItemStack) {
-            return ((SlimefunItemStack) item).getItemId();
+        SlimefunItem sfItem = SlimefunItem.getByItem(item);
+        if (sfItem != null) {
+            return sfItem.getId();
         } else if (item.hasItemMeta()) {
             String id = getId(item.getItemMeta());
             return id == null ? item.getType().name() : id;
@@ -107,3 +108,4 @@ public final class StackUtils {
     }
 
 }
+

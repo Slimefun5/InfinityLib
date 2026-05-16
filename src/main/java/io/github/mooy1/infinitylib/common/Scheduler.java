@@ -2,8 +2,6 @@ package io.github.mooy1.infinitylib.common;
 
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import lombok.experimental.UtilityClass;
-
 import org.bukkit.Bukkit;
 
 import io.github.mooy1.infinitylib.core.AbstractAddon;
@@ -13,9 +11,10 @@ import io.github.mooy1.infinitylib.core.AbstractAddon;
  *
  * @author Mooy1
  */
-@UtilityClass
 @ParametersAreNonnullByDefault
 public final class Scheduler {
+
+    private Scheduler() {}
 
     public static void run(Runnable runnable) {
         Bukkit.getScheduler().runTask(AbstractAddon.instance(), runnable);

@@ -9,8 +9,6 @@ import java.util.function.Function;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import lombok.RequiredArgsConstructor;
-
 import org.bukkit.Location;
 import org.bukkit.Material;
 import org.bukkit.configuration.InvalidConfigurationException;
@@ -21,14 +19,13 @@ import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.util.io.BukkitObjectInputStream;
 import org.bukkit.util.io.BukkitObjectOutputStream;
 
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
+import io.github.bakedlibs.dough.items.CustomItemStack;
 
 /**
  * A class with some persistent data types
  *
  * @author Mooy1
  */
-@RequiredArgsConstructor
 @ParametersAreNonnullByDefault
 public final class PersistentType<T, Z> implements PersistentDataType<T, Z> {
 
@@ -51,7 +48,7 @@ public final class PersistentType<T, Z> implements PersistentDataType<T, Z> {
                 }
                 catch (Exception e) {
                     e.printStackTrace();
-                    return new CustomItemStack(Material.STONE, "&cERROR");
+                    return CustomItemStack.create(Material.STONE, "&cERROR");
                 }
             }
     );
@@ -157,10 +154,10 @@ public final class PersistentType<T, Z> implements PersistentDataType<T, Z> {
                 }
                 catch (InvalidConfigurationException e) {
                     e.printStackTrace();
-                    return new CustomItemStack(Material.STONE, "&cERROR");
+                    return CustomItemStack.create(Material.STONE, "&cERROR");
                 }
                 ItemStack item = config.getItemStack("item");
-                return item != null ? item : new CustomItemStack(Material.STONE, "&cERROR");
+                return item != null ? item : CustomItemStack.create(Material.STONE, "&cERROR");
             }
     );
 
@@ -168,6 +165,13 @@ public final class PersistentType<T, Z> implements PersistentDataType<T, Z> {
     private final Class<Z> complex;
     private final Function<Z, T> toPrimitive;
     private final Function<T, Z> toComplex;
+
+    public PersistentType(Class<T> primitive, Class<Z> complex, Function<Z, T> toPrimitive, Function<T, Z> toComplex) {
+        this.primitive = primitive;
+        this.complex = complex;
+        this.toPrimitive = toPrimitive;
+        this.toComplex = toComplex;
+    }
 
     @Nonnull
     @Override
@@ -194,3 +198,4 @@ public final class PersistentType<T, Z> implements PersistentDataType<T, Z> {
     }
 
 }
+

@@ -6,17 +6,16 @@ import java.util.List;
 import java.util.Map;
 import java.util.function.BiConsumer;
 
-import lombok.Getter;
-
 import org.bukkit.inventory.ItemStack;
 
 import io.github.mooy1.infinitylib.core.AbstractAddon;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 
 public final class MachineRecipeType extends RecipeType {
 
-    @Getter
     private final Map<ItemStack[], ItemStack> recipes = new LinkedHashMap<>();
+
+    public Map<ItemStack[], ItemStack> recipes() { return this.recipes; }
     private final List<BiConsumer<ItemStack[], ItemStack>> callbacks = new ArrayList<>();
 
     public MachineRecipeType(String key, ItemStack item) {
@@ -35,3 +34,4 @@ public final class MachineRecipeType extends RecipeType {
     }
 
 }
+

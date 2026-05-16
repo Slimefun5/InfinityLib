@@ -7,11 +7,11 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 import be.seeseemelk.mockbukkit.MockBukkit;
-import io.github.thebusybiscuit.slimefun4.core.services.CustomItemDataService;
-import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
-import io.github.thebusybiscuit.slimefun4.implementation.setup.SlimefunItemSetup;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.core.services.CustomItemDataService;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.implementation.SlimefunItems;
+import io.github.thebusybiscuit.slimefun5.implementation.setup.SlimefunItemSetup;
+import io.github.bakedlibs.dough.items.CustomItemStack;
 
 import static io.github.mooy1.infinitylib.common.StackUtils.getId;
 import static io.github.mooy1.infinitylib.common.StackUtils.getIdOrType;
@@ -87,7 +87,7 @@ class TestStackUtils {
         ItemStack stone = new ItemStack(Material.STONE);
         ItemStack salt = SlimefunItems.SALT;
         ItemStack sugar = new ItemStack(Material.SUGAR);
-        ItemStack dust = new CustomItemStack(Material.SUGAR, "Dust");
+        ItemStack dust = CustomItemStack.create(Material.SUGAR, "Dust");
 
         assertTrue(isSimilar(nul, nul));
         assertTrue(isSimilar(nul, air));
@@ -113,3 +113,4 @@ class TestStackUtils {
     }
 
 }
+

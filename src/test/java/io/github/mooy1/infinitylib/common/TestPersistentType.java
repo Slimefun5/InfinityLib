@@ -18,7 +18,7 @@ import be.seeseemelk.mockbukkit.MockBukkit;
 import be.seeseemelk.mockbukkit.ServerMock;
 import be.seeseemelk.mockbukkit.WorldMock;
 import be.seeseemelk.mockbukkit.persistence.PersistentDataContainerMock;
-import io.github.thebusybiscuit.slimefun4.implementation.SlimefunItems;
+import io.github.thebusybiscuit.slimefun5.implementation.SlimefunItems;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -102,3 +102,4 @@ class TestPersistentType {
     }
 
 }
+

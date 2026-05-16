@@ -4,18 +4,19 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
 
-import lombok.RequiredArgsConstructor;
-
 /**
  * An object for holding cool downs based on uuids
  *
  * @author Mooy1
  */
-@RequiredArgsConstructor
 public final class CoolDowns {
 
     private final Map<UUID, Long> map = new HashMap<>();
     private final long cd;
+
+    public CoolDowns(long cd) {
+        this.cd = cd;
+    }
 
     public boolean check(UUID uuid) {
         return System.currentTimeMillis() - map.getOrDefault(uuid, 0L) >= cd;

@@ -10,7 +10,7 @@ import org.junit.jupiter.api.Test;
 
 import be.seeseemelk.mockbukkit.MockBukkit;
 import io.github.mooy1.infinitylib.core.MockAddon;
-import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -50,3 +50,4 @@ class TestMachineRecipeType {
     }
 
 }
+

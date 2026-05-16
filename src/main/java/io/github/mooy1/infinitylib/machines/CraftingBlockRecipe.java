@@ -1,21 +1,22 @@
 package io.github.mooy1.infinitylib.machines;
 
-import lombok.Getter;
-
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import io.github.mooy1.infinitylib.common.StackUtils;
-import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItem;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.ItemStackSnapshot;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.items.ItemUtils;
+import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
+import io.github.bakedlibs.dough.items.ItemStackSnapshot;
+import io.github.bakedlibs.dough.items.ItemUtils;
 
-@Getter
 public final class CraftingBlockRecipe {
 
     private final ItemStack[] recipe;
     final ItemStack output;
     final SlimefunItem item;
+
+    public ItemStack[] recipe() { return this.recipe; }
+    public ItemStack output() { return this.output; }
+    public SlimefunItem item() { return this.item; }
 
     CraftingBlockRecipe(ItemStack output, ItemStack[] recipe) {
         this.output = output;
@@ -46,3 +47,4 @@ public final class CraftingBlockRecipe {
     }
     
 }
+

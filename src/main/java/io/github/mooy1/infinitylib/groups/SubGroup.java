@@ -6,7 +6,7 @@ import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
 import io.github.mooy1.infinitylib.core.AbstractAddon;
-import io.github.thebusybiscuit.slimefun4.api.items.ItemGroup;
+import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
 
 /**
  * A category that is hidden from the main guide page
@@ -30,3 +30,4 @@ public final class SubGroup extends ItemGroup {
     }
 
 }
+
