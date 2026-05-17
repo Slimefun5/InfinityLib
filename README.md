@@ -12,22 +12,6 @@ A shared library providing utilities and APIs for Slimefun addons.
 - Paper 1.16.* - 26.1.*
 - Slimefun 5
 
-## Developer API
-
-You can easily depend on this project using [github-gradle](https://github.com/intisy/github-gradle).
-
-In your `build.gradle.kts`:
-
-```kotlin
-plugins {
-    id("io.github.intisy.github-gradle") version "1.8.2.1"
-}
-
-dependencies {
-    "githubCompileOnly"("Slimefun5:InfinityLib:v1.3.11")
-}
-```
-
 A shaded library for Slimefun addons which adds a bunch of useful classes and utilities.
 
 [![Release](https://jitpack.io/v/Mooy1/InfinityLib.svg)](https://jitpack.io/#Mooy1/InfinityLib)
@@ -136,3 +120,19 @@ Then change your main plugin class to extend `AbstractAddon` and implement the c
 You will need to use `enable()` and `disable()` instead of `onEnable()` and `onDisable`.
 Make sure you don't call `super.onEnable/Disable`.
 Your updater and config setup is now handled, make sure to test that it's working though!
+
+## Developer API
+
+You can easily depend on this project using [github-gradle](https://github.com/intisy/github-gradle).
+
+In your `build.gradle.kts`:
+
+```kotlin
+plugins {
+    id("io.github.intisy.github-gradle") version "1.8.2.1"
+}
+
+dependencies {
+    "githubCompileOnly"("Slimefun5:InfinityLib:v1.3.11")
+}
+```
