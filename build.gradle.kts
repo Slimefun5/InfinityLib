@@ -8,6 +8,12 @@ plugins {
 group = "com.github.Riley31415"
 version = "1.3.10"
 description = "Library for Slimefun addons"
+github {
+    accessToken = System.getenv("GITHUB_TOKEN") ?: ""
+    publish {
+        tag = System.getenv("GITHUB_REF_NAME")
+    }
+}
 
 java {
     toolchain {
@@ -59,3 +65,4 @@ publishing {
         }
     }
 }
+
