@@ -12,11 +12,6 @@ A shared library providing utilities and APIs for Slimefun addons.
 - Paper 1.16.* - 26.1.*
 - Slimefun 5
 
-A shaded library for Slimefun addons which adds a bunch of useful classes and utilities.
-
-[![Release](https://jitpack.io/v/Mooy1/InfinityLib.svg)](https://jitpack.io/#Mooy1/InfinityLib)
-
-# Packages & Features
 ## Core
 <b>AbstractAddon</b>: An implementation of JavaPlugin
 which you will need to extend for many of the other features to work.
