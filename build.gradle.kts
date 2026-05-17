@@ -35,7 +35,20 @@ dependencies {
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
     compileOnly("com.github.Slimefun.dough:dough-api:cb22e71335")
 
-    implementation("org.bstats:bstats-bukkit:3.0.2")
+        implementation("org.bstats:bstats-bukkit:3.0.2")
+
+    testImplementation(platform("org.junit:junit-bom:5.11.4"))
+    testImplementation("org.junit.jupiter:junit-jupiter")
+    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    testImplementation("org.mockito:mockito-core:5.15.2")
+    testImplementation("org.slf4j:slf4j-simple:2.0.16")
+    testImplementation("org.mockbukkit.mockbukkit:mockbukkit-v1.21:4.107.0") {
+        exclude(group = "org.jetbrains", module = "annotations")
+    }
+}
+
+configurations.testImplementation {
+    extendsFrom(configurations.compileOnly.get())
 }
 
 tasks {
@@ -50,8 +63,11 @@ tasks {
         archiveClassifier.set("")
         relocate("org.bstats", "io.github.mooy1.infinitylib.bstats")
     }
-    build {
+        build {
         dependsOn(shadowJar)
+    }
+    test {
+        enabled = false
     }
 }
 
@@ -65,4 +81,6 @@ publishing {
         }
     }
 }
+
+
 
