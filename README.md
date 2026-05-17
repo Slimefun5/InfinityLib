@@ -5,7 +5,7 @@
 [![GitHub Followers](https://img.shields.io/github/followers/Slimefun5?style=social)](https://github.com/Slimefun5)
 [![GitHub Stars](https://img.shields.io/github/stars/Slimefun5/InfinityLib?style=social)](https://github.com/Slimefun5/InfinityLib)
 
-A Slimefun 5 Addon.
+A shared library providing utilities and APIs for Slimefun addons.
 
 ## Requirements
 - Java 25
