@@ -30,13 +30,13 @@ repositories {
 }
 
 dependencies {
+    githubImplementation("Slimefun5:SlimefunMetrics:master")
     "githubCompileOnly"("Slimefun5:Slimefun5:v5.1.1")
     compileOnly("io.papermc.paper:paper-api:${property("paperApiVersion")}")
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
     compileOnly("com.github.Slimefun.dough:dough-api:cb22e71335")
 
-        implementation("org.bstats:bstats-bukkit:3.0.2")
-
+        
     testImplementation(platform("org.junit:junit-bom:5.11.4"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
@@ -61,8 +61,7 @@ tasks {
     shadowJar {
         archiveFileName.set("InfinityLib-v${project.version}.jar")
         archiveClassifier.set("")
-        relocate("org.bstats", "io.github.mooy1.infinitylib.bstats")
-    }
+            }
         build {
         dependsOn(shadowJar)
     }
