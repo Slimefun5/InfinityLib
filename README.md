@@ -4,6 +4,7 @@
 ![GitHub Downloads (all assets, all releases)](https://img.shields.io/github/downloads/Slimefun5/InfinityLib/total)
 [![GitHub Followers](https://img.shields.io/github/followers/Slimefun5?style=social)](https://github.com/Slimefun5)
 [![GitHub Stars](https://img.shields.io/github/stars/Slimefun5/InfinityLib?style=social)](https://github.com/Slimefun5/InfinityLib)
+[![bStats](https://bStats.org/signatures/bukkit/InfinityLib.svg)](https://bStats.org/plugin/bukkit/InfinityLib/31439)
 
 A shared library providing utilities and APIs for Slimefun addons.
 
