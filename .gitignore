@@ -8,3 +8,5 @@
 dependency-reduced-pom.xml
 .DS_Store
 pom.xml.versionsBackup
+
+build/
