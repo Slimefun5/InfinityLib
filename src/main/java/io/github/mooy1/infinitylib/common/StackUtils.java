@@ -13,13 +13,16 @@ import org.bukkit.persistence.PersistentDataType;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
+import io.github.thebusybiscuit.slimefun5.utils.compatibility.BukkitKeys;
 
 @ParametersAreNonnullByDefault
 public final class StackUtils {
 
     private StackUtils() {}
 
-    private static final NamespacedKey ID_KEY = Slimefun.getItemDataService().getKey();
+    // getKey() returns the core's relocated key; PDC needs a real org.bukkit one. Null below 1.12,
+    // but PDC is 1.14+ only anyway.
+    private static final NamespacedKey ID_KEY = (NamespacedKey) BukkitKeys.toBukkit(Slimefun.getItemDataService().getKey());
 
     @Nullable
     public static String getId(ItemStack item) {

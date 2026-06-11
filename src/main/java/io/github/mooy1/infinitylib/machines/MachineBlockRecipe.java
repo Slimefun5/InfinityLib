@@ -6,7 +6,7 @@ import java.util.Map;
 import org.bukkit.inventory.ItemStack;
 
 import io.github.mooy1.infinitylib.common.StackUtils;
-import io.github.bakedlibs.dough.items.ItemUtils;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemUtils;
 
 final class MachineBlockRecipe {
 

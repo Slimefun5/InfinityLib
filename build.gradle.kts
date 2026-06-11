@@ -17,7 +17,7 @@ github {
 
 java {
     toolchain {
-        languageVersion.set(JavaLanguageVersion.of(25))
+        languageVersion.set(JavaLanguageVersion.of(8))
     }
 }
 
@@ -30,11 +30,13 @@ repositories {
 }
 
 dependencies {
-    implementation("com.github.Slimefun5:SlimefunMetrics:master-SNAPSHOT")
-    "githubCompileOnly"("Slimefun5:Slimefun5:v5.1.1")
-    compileOnly("io.papermc.paper:paper-api:${property("paperApiVersion")}")
+    // Compile against our Java-8 core jar (it bundles the relocated dough) rather than the upstream
+    // modern core. Spigot 1.16.5 is the floor (not 1.8.8 like the core): it is the newest API still in
+    // Java-8 bytecode a JDK-8 toolchain can read, and it has the PDC + modern Bukkit APIs this addon
+    // needs. The jar is Java-8 and runs on any 1.16+ server (PDC addons cannot work below 1.14 anyway).
+    compileOnly(files("../../core/Slimefun5/core/build/libs/Slimefun v5.0.0-UNOFFICIAL-MC26.1.2.jar"))
+    compileOnly("org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT")
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
-    compileOnly("com.github.Slimefun.dough:dough-api:cb22e71335")
 
         
     testImplementation(platform("org.junit:junit-bom:5.11.4"))
