@@ -1,0 +1,32 @@
+name: Publish Release
+on:
+  push:
+    tags:
+      - "*"
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout project sources
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      # Uploads the shaded jar as InfinityLib.jar on the release for this tag, so addons can consume it
+      # via githubImplementation("Slimefun5:InfinityLib:<tag>").
+      - name: Publish GitHub Release
+        run: ./gradlew publishGithub -Partifact_version=${{ github.ref_name }} --no-daemon
+        env:
+          GITHUB_TOKEN: ${{ secrets.PAT || secrets.GITHUB_TOKEN }}
