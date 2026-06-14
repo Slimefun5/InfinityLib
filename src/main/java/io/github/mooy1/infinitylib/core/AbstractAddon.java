@@ -167,7 +167,9 @@ public abstract class AbstractAddon extends JavaPlugin implements SlimefunAddon 
             brokenConfig = true;
             handle(new IllegalStateException("Empty auto update key!"));
         }
-        else if (!brokenConfig && !config.getDefaults().contains(autoUpdateKey, true)) {
+        // 1-arg contains: the 2-arg overload is 1.9+ (NoSuchMethodError on 1.8). On the defaults config
+        // itself (no nested defaults) the 1-arg form is equivalent to contains(key, true).
+        else if (!brokenConfig && !config.getDefaults().contains(autoUpdateKey)) {
             brokenConfig = true;
             handle(new IllegalStateException("Auto update key missing from the default config!"));
         }

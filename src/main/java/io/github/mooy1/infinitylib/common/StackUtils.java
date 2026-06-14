@@ -5,24 +5,17 @@ import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.persistence.PersistentDataType;
 
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun5.utils.compatibility.BukkitKeys;
 
 @ParametersAreNonnullByDefault
 public final class StackUtils {
 
     private StackUtils() {}
-
-    // getKey() returns the core's relocated key; PDC needs a real org.bukkit one. Null below 1.12,
-    // but PDC is 1.14+ only anyway.
-    private static final NamespacedKey ID_KEY = (NamespacedKey) BukkitKeys.toBukkit(Slimefun.getItemDataService().getKey());
 
     @Nullable
     public static String getId(ItemStack item) {
@@ -38,7 +31,13 @@ public final class StackUtils {
 
     @Nullable
     public static String getId(ItemMeta meta) {
-        return meta.getPersistentDataContainer().get(ID_KEY, PersistentDataType.STRING);
+        // Version-safe id lookup: PDC on 1.14+, item NBT fallback below (handled by the core service).
+        return Slimefun.getItemDataService().getItemData(meta).orElse(null);
+    }
+
+    private static boolean isAir(ItemStack item) {
+        Material type = item.getType();
+        return type == Material.AIR || type.name().endsWith("AIR");
     }
 
     @Nonnull
@@ -73,9 +72,9 @@ public final class StackUtils {
      *  - Have the same type and display name or lack thereof
      */
     public static boolean isSimilar(@Nullable ItemStack first, @Nullable ItemStack second) {
-        if (first == null || first.getType().isAir()) {
-            return second == null || second.getType().isAir();
-        } else if (second == null || second.getType().isAir()) {
+        if (first == null || isAir(first)) {
+            return second == null || isAir(second);
+        } else if (second == null || isAir(second)) {
             return false;
         } else if (first.hasItemMeta()) {
             if (second.hasItemMeta()) {

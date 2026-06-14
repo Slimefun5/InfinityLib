@@ -20,7 +20,7 @@ final class MachineBlockRecipe {
 
         Map<String, Integer> strings = new HashMap<>();
         for (ItemStack item : input) {
-            if (item != null && !item.getType().isAir()) {
+            if (item != null && item.getType() != org.bukkit.Material.AIR && !item.getType().name().endsWith("AIR")) {
                 String string = StackUtils.getId(item);
                 if (string == null) {
                     string = item.getType().name();
