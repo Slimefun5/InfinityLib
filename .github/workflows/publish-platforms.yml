@@ -12,4 +12,5 @@ jobs:
     uses: Slimefun5/workflows/.github/workflows/publish-platforms.yml@stable
     with:
       project_name: ${{ github.event.repository.name }}
+      github_release: false
     secrets: inherit
