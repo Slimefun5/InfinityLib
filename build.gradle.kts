@@ -61,7 +61,7 @@ tasks {
         enabled = false
     }
     shadowJar {
-        archiveFileName.set("InfinityLib-v${project.version}.jar")
+        archiveFileName.set("InfinityLib-1.3.10-UNOFFICIAL.jar")
         archiveClassifier.set("")
             }
         build {
