@@ -6,7 +6,7 @@ import java.util.Map;
 import org.bukkit.inventory.ItemStack;
 
 import io.github.mooy1.infinitylib.common.StackUtils;
-import io.github.bakedlibs.dough.items.ItemUtils;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemUtils;
 
 final class MachineBlockRecipe {
 
@@ -20,7 +20,7 @@ final class MachineBlockRecipe {
 
         Map<String, Integer> strings = new HashMap<>();
         for (ItemStack item : input) {
-            if (item != null && !item.getType().isAir()) {
+            if (item != null && item.getType() != org.bukkit.Material.AIR && !item.getType().name().endsWith("AIR")) {
                 String string = StackUtils.getId(item);
                 if (string == null) {
                     string = item.getType().name();

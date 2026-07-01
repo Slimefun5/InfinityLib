@@ -19,7 +19,7 @@ import io.github.thebusybiscuit.slimefun5.core.guide.SlimefunGuide;
 import io.github.thebusybiscuit.slimefun5.core.guide.SlimefunGuideImplementation;
 import io.github.thebusybiscuit.slimefun5.core.guide.SlimefunGuideMode;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
-import io.github.bakedlibs.dough.items.ItemUtils;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemUtils;
 import io.github.thebusybiscuit.slimefun5.utils.ChestMenuUtils;
 import me.mrCookieSlime.CSCoreLibPlugin.general.Inventory.ChestMenu;
 

@@ -8,19 +8,22 @@ import java.util.logging.Logger;
 import javax.annotation.Nonnull;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import org.bukkit.NamespacedKey;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import dev.walshy.sfmetrics.MetricsModule;
 import org.bukkit.plugin.java.JavaPluginLoader;
 
+// Relocated key: feeds the core API (RecipeType/ItemGroup), which takes this type so identity keys
+// can exist below 1.12. Convert to org.bukkit only at Bukkit-API boundaries (see StackUtils).
+import io.github.thebusybiscuit.slimefun5.libraries.keys.NamespacedKey;
+
 import io.github.mooy1.infinitylib.InfinityLib;
 import io.github.mooy1.infinitylib.commands.AddonCommand;
 import io.github.mooy1.infinitylib.common.Scheduler;
 import io.github.thebusybiscuit.slimefun5.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
-import io.github.bakedlibs.dough.updater.GitHubBuildsUpdater;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.updater.GitHubBuildsUpdater;
 
 /**
  * Extend this in your main plugin class to access a bunch of utilities
@@ -165,7 +168,9 @@ public abstract class AbstractAddon extends JavaPlugin implements SlimefunAddon 
             brokenConfig = true;
             handle(new IllegalStateException("Empty auto update key!"));
         }
-        else if (!brokenConfig && !config.getDefaults().contains(autoUpdateKey, true)) {
+        // 1-arg contains: the 2-arg overload is 1.9+ (NoSuchMethodError on 1.8). On the defaults config
+        // itself (no nested defaults) the 1-arg form is equivalent to contains(key, true).
+        else if (!brokenConfig && !config.getDefaults().contains(autoUpdateKey)) {
             brokenConfig = true;
             handle(new IllegalStateException("Auto update key missing from the default config!"));
         }

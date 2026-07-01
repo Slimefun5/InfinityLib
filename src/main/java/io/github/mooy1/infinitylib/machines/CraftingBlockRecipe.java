@@ -5,8 +5,8 @@ import org.bukkit.inventory.ItemStack;
 
 import io.github.mooy1.infinitylib.common.StackUtils;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItem;
-import io.github.bakedlibs.dough.items.ItemStackSnapshot;
-import io.github.bakedlibs.dough.items.ItemUtils;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemStackSnapshot;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemUtils;
 
 public final class CraftingBlockRecipe {
 

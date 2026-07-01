@@ -9,6 +9,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 import org.bukkit.block.Block;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
@@ -16,9 +17,9 @@ import org.bukkit.inventory.ItemStack;
 import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
-import io.github.bakedlibs.dough.items.CustomItemStack;
-import io.github.bakedlibs.dough.items.ItemStackSnapshot;
-import io.github.bakedlibs.dough.items.ItemUtils;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemStackSnapshot;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemUtils;
 import io.github.thebusybiscuit.slimefun5.utils.ChestMenuUtils;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenuPreset;
@@ -27,7 +28,7 @@ import me.mrCookieSlime.Slimefun.api.inventory.DirtyChestMenu;
 @ParametersAreNonnullByDefault
 public class CraftingBlock extends MenuBlock {
 
-    public static final ItemStack CLICK_TO_CRAFT = CustomItemStack.create(Material.LIME_STAINED_GLASS_PANE, "&aClick To Craft!");
+    public static final ItemStack CLICK_TO_CRAFT = CustomItemStack.create(XMaterial.LIME_STAINED_GLASS_PANE.parseMaterial(), "&aClick To Craft!");
 
     protected MachineLayout layout = MachineLayout.CRAFTING_DEFAULT;
 

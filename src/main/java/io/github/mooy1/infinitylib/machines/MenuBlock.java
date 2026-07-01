@@ -7,6 +7,7 @@ import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
+import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 import org.bukkit.block.Block;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
@@ -18,7 +19,7 @@ import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun5.core.handlers.BlockBreakHandler;
 import io.github.thebusybiscuit.slimefun5.core.handlers.BlockPlaceHandler;
-import io.github.bakedlibs.dough.items.CustomItemStack;
+import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.utils.ChestMenuUtils;
 import me.mrCookieSlime.Slimefun.api.BlockStorage;
 import me.mrCookieSlime.Slimefun.api.inventory.BlockMenu;
@@ -29,10 +30,10 @@ import me.mrCookieSlime.Slimefun.api.item_transport.ItemTransportFlow;
 @ParametersAreNonnullByDefault
 public abstract class MenuBlock extends SlimefunItem {
 
-    public static final ItemStack PROCESSING_ITEM = CustomItemStack.create(Material.LIME_STAINED_GLASS_PANE, "&aProcessing...");
-    public static final ItemStack NO_ENERGY_ITEM = CustomItemStack.create(Material.RED_STAINED_GLASS_PANE, "&cNot enough energy!");
-    public static final ItemStack IDLE_ITEM = CustomItemStack.create(Material.BLACK_STAINED_GLASS_PANE, "&8Idle");
-    public static final ItemStack NO_ROOM_ITEM = CustomItemStack.create(Material.ORANGE_STAINED_GLASS_PANE, "&6Not enough room!");
+    public static final ItemStack PROCESSING_ITEM = CustomItemStack.create(XMaterial.LIME_STAINED_GLASS_PANE.parseMaterial(), "&aProcessing...");
+    public static final ItemStack NO_ENERGY_ITEM = CustomItemStack.create(XMaterial.RED_STAINED_GLASS_PANE.parseMaterial(), "&cNot enough energy!");
+    public static final ItemStack IDLE_ITEM = CustomItemStack.create(XMaterial.BLACK_STAINED_GLASS_PANE.parseMaterial(), "&8Idle");
+    public static final ItemStack NO_ROOM_ITEM = CustomItemStack.create(XMaterial.ORANGE_STAINED_GLASS_PANE.parseMaterial(), "&6Not enough room!");
     public static final ItemStack OUTPUT_BORDER = CustomItemStack.create(ChestMenuUtils.getOutputSlotTexture(), "&6Output");
     public static final ItemStack INPUT_BORDER = CustomItemStack.create(ChestMenuUtils.getInputSlotTexture(), "&9Input");
     public static final ItemStack BACKGROUND_ITEM = ChestMenuUtils.getBackground();
