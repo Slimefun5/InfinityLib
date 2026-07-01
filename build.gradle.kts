@@ -5,8 +5,19 @@ plugins {
     id("io.github.intisy.github-gradle")
 }
 
+fun latestGitTagVersion(): String? = try {
+    val out = providers.exec { workingDir = rootDir; commandLine("git","describe","--tags","--abbrev=0"); isIgnoreExitValue = true }
+    if (out.result.get().exitValue == 0) out.standardOutput.asText.get().trim().removePrefix("gh-").removePrefix("v").takeIf { it.isNotBlank() } else null
+} catch (e: Exception) { null }
+
 group = "com.github.Riley31415"
-version = "1.3.10"
+version = (project.findProperty("artifact_version") as String?)?.removePrefix("v")?.takeIf { it.isNotBlank() } ?: latestGitTagVersion() ?: "1.3.10"
+val versionSuffix: String = when {
+    !(project.findProperty("artifact_version") as String?).isNullOrBlank() -> ""
+    System.getenv("GITHUB_ACTIONS") == "true" -> "-EXPERIMENTAL"
+    else -> "-UNOFFICIAL"
+}
+val displayVersion = "${project.version}$versionSuffix"
 description = "Library for Slimefun addons"
 github {
     accessToken = System.getenv("GITHUB_TOKEN") ?: ""
@@ -69,7 +80,7 @@ tasks {
         enabled = false
     }
     shadowJar {
-        archiveFileName.set("InfinityLib-1.3.10-UNOFFICIAL.jar")
+        archiveFileName.set("InfinityLib-$displayVersion.jar")
         archiveClassifier.set("")
             }
         build {
