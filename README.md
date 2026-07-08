@@ -129,7 +129,7 @@ plugins {
 }
 
 dependencies {
-    "githubCompileOnly"("Slimefun5:InfinityLib:v1.3.14.3")
+    "githubCompileOnly"("Slimefun5:InfinityLib:v1.3.14.4")
 }
 ```
 
