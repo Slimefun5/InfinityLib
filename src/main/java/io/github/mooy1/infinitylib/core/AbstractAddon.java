@@ -11,7 +11,6 @@ import javax.annotation.ParametersAreNonnullByDefault;
 import org.bukkit.command.PluginCommand;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
-import dev.walshy.sfmetrics.MetricsModule;
 import org.bukkit.plugin.java.JavaPluginLoader;
 
 // Relocated key: feeds the core API (RecipeType/ItemGroup), which takes this type so identity keys
