@@ -41,10 +41,7 @@ repositories {
 }
 
 dependencies {
-    // Compile against our Java-8 core jar (it bundles the relocated dough) rather than the upstream
-    // modern core. Spigot 1.16.5 is the floor (not 1.8.8 like the core): it is the newest API still in
-    // Java-8 bytecode a JDK-8 toolchain can read, and it has the PDC + modern Bukkit APIs this addon
-    // needs. The jar is Java-8 and runs on any 1.16+ server (PDC addons cannot work below 1.14 anyway).
+    // Java-8 core jar (bundles relocated dough); Spigot 1.16.5 floor is the newest API in Java-8 bytecode with PDC.
     githubCompileOnly("Slimefun5:Slimefun5:v5.2.1")
     compileOnly("org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT")
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
