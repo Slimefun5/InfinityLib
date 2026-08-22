@@ -3,6 +3,7 @@ package io.github.mooy1.infinitylib.machines;
 import java.util.List;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.Location;
@@ -117,6 +118,23 @@ public abstract class MenuBlock extends SlimefunItem {
      */
     protected boolean canOpen(Block b, Player p) {
         return true;
+    }
+
+    /**
+     * Why {@link #canOpen} refused, shown to {@code p} in place of the generic "not permitted to access
+     * this block". Override alongside {@link #canOpen} when the refusal is something the player can act
+     * on rather than a permission problem.
+     *
+     * @param b
+     *            The block being opened
+     * @param p
+     *            The player opening it
+     *
+     * @return The message to show, or {@code null} for the generic permission one
+     */
+    @Nullable
+    protected String getAccessDenialMessage(Block b, Player p) {
+        return null;
     }
 
 }

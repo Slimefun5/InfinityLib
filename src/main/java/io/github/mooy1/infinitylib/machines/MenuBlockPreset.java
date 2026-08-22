@@ -1,5 +1,6 @@
 package io.github.mooy1.infinitylib.machines;
 
+import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.block.Block;
@@ -45,6 +46,12 @@ final class MenuBlockPreset extends BlockMenuPreset {
         return Slimefun.getProtectionManager().hasPermission(p, b.getLocation(), Interaction.INTERACT_BLOCK)
                 && menuBlock.canUse(p, false)
                 && menuBlock.canOpen(b, p);
+    }
+
+    @Override
+    @Nullable
+    public String getAccessDenialMessage(Block b, Player p) {
+        return menuBlock.getAccessDenialMessage(b, p);
     }
 
     @Override
