@@ -43,7 +43,8 @@ final class MenuBlockPreset extends BlockMenuPreset {
     @Override
     public boolean canOpen(Block b, Player p) {
         return Slimefun.getProtectionManager().hasPermission(p, b.getLocation(), Interaction.INTERACT_BLOCK)
-                && menuBlock.canUse(p, false);
+                && menuBlock.canUse(p, false)
+                && menuBlock.canOpen(b, p);
     }
 
     @Override

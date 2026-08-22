@@ -9,6 +9,7 @@ import org.bukkit.Location;
 import org.bukkit.Material;
 import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 import org.bukkit.block.Block;
+import org.bukkit.entity.Player;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.inventory.ItemStack;
@@ -102,5 +103,20 @@ public abstract class MenuBlock extends SlimefunItem {
 
     }
 
-}
+    /**
+     * Whether {@code p} may open this block's menu right now. Override to gate opening on a condition only
+     * the block knows, such as a bespoke multiblock not being fully built. Returning false stops the menu
+     * being created at all, rather than opening it and closing it again a tick later.
+     *
+     * @param b
+     *            The block being opened
+     * @param p
+     *            The player opening it
+     *
+     * @return Whether the menu may open
+     */
+    protected boolean canOpen(Block b, Player p) {
+        return true;
+    }
 
+}
