@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: εμφανίζει τα διαθέσιμα ψευδώνυμα αυτής της εντολής
+    message: 'Ψευδώνυμα για /%cmd%: %aliases%'
+  help:
+    description: Εμφανίζει αυτό το μήνυμα
+    header: '&7----------&b Βοήθεια /%cmd% &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bΚοινότητα Πρόσθετου: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bΈκδοση Πρόσθετου: &7%version%'
+    description: Δίνει την έκδοση του πρόσθετου και του Slimefun και συνδέσμους Discord
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bDiscord Slimefun: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bΈκδοση Slimefun: &7%version%'
+    title: '&bΠληροφορίες %addon%'
+crafting:
+  invalid-recipe: '&cΜη έγκυρη συνταγή!'
+  no-room: '&6Δεν υπάρχει αρκετός χώρος!'
+  success: '&aΚατασκευάστηκε με επιτυχία: %item%'

@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: изброява наличните псевдоними за тази команда
+    message: 'Псевдоними за /%cmd%: %aliases%'
+  help:
+    description: Показва това
+    header: '&7----------&b /%cmd% Помощ &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bОбщност на добавката: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bВерсия на добавката: &7%version%'
+    description: Дава версията на добавката и на Slimefun и връзки към Discord
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bDiscord на Slimefun: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bВерсия на Slimefun: &7%version%'
+    title: '&b%addon% Информация'
+crafting:
+  invalid-recipe: '&cНевалидна рецепта!'
+  no-room: '&6Няма достатъчно място!'
+  success: '&aУспешно изработено: %item%'

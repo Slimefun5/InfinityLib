@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: lys die beskikbare aliasse vir hierdie bevel
+    message: 'Aliasse vir /%cmd%: %aliases%'
+  help:
+    description: Wys hierdie
+    header: '&7----------&b /%cmd% Hulp &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bByvoeginggemeenskap: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bByvoegingweergawe: &7%version%'
+    description: Gee die byvoeging- en Slimefun-weergawe en Discord-skakels
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bSlimefun Discord: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bSlimefun-weergawe: &7%version%'
+    title: '&b%addon%-inligting'
+crafting:
+  invalid-recipe: '&cOngeldige Resep!'
+  no-room: '&6Nie genoeg plek nie!'
+  success: '&aSuksesvol vervaardig: %item%'

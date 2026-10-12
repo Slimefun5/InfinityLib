@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: يسرد الأسماء البديلة المتاحة لهذا الأمر
+    message: 'الأسماء البديلة لـ/%cmd%: %aliases%'
+  help:
+    description: يعرض هذا
+    header: '&7----------&b مساعدة /%cmd% &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bمجتمع الإضافة: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bإصدار الإضافة: &7%version%'
+    description: يعطي إصدار الإضافة وإصدار Slimefun وروابط ديسكورد
+    github: '&bغيت هاب: &7%url%'
+    slimefun-discord: '&bديسكورد Slimefun: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bإصدار Slimefun: &7%version%'
+    title: '&bمعلومات %addon%'
+crafting:
+  invalid-recipe: '&cوصفة غير صالحة!'
+  no-room: '&6لا توجد مساحة كافية!'
+  success: '&aتم الصنع بنجاح: %item%'

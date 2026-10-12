@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: uzskaita šai komandai pieejamos aizstājvārdus
+    message: '/%cmd% aizstājvārdi: %aliases%'
+  help:
+    description: Parāda šo
+    header: '&7----------&b /%cmd% palīdzība &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bPapildinājuma kopiena: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bPapildinājuma versija: &7%version%'
+    description: Parāda papildinājuma un Slimefun versiju, kā arī Discord saites
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bSlimefun Discord: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bSlimefun versija: &7%version%'
+    title: '&b%addon% informācija'
+crafting:
+  invalid-recipe: '&cNederīga recepte!'
+  no-room: '&6Nepietiek vietas!'
+  success: '&aVeiksmīgi izgatavots: %item%'

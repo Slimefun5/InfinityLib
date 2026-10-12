@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: bu komut için kullanılabilir takma adları listeler
+    message: '/%cmd% için takma adlar: %aliases%'
+  help:
+    description: Bunu gösterir
+    header: '&7----------&b /%cmd% Yardım &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bEklenti Topluluğu: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bEklenti Sürümü: &7%version%'
+    description: Eklenti ve slimefun sürümünü ve discord bağlantılarını verir
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bSlimefun Discord: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bSlimefun Sürümü: &7%version%'
+    title: '&b%addon% Bilgi'
+crafting:
+  invalid-recipe: '&cGeçersiz Tarif!'
+  no-room: '&6Yeterli Yer Yok!'
+  success: '&aBaşarıyla Üretildi: %item%'

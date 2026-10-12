@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: toont de beschikbare aliassen voor dit commando
+    message: 'Aliassen voor /%cmd%: %aliases%'
+  help:
+    description: Toont dit
+    header: '&7----------&b /%cmd% Hulp &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bAddongemeenschap: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bAddonversie: &7%version%'
+    description: Geeft de addon- en slimefun-versie en discordlinks
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bSlimefun Discord: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bSlimefun-versie: &7%version%'
+    title: '&b%addon%-info'
+crafting:
+  invalid-recipe: '&cOngeldig recept!'
+  no-room: '&6Niet genoeg ruimte!'
+  success: '&aSuccesvol vervaardigd: %item%'

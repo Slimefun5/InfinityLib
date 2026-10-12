@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: navodi dostupne alijase za ovu naredbu
+    message: 'Alijasi za /%cmd%: %aliases%'
+  help:
+    description: Prikazuje ovo
+    header: '&7----------&b /%cmd% pomoć &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bZajednica dodatka: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bVerzija dodatka: &7%version%'
+    description: Daje verziju dodatka i Slimefuna te discord poveznice
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bSlimefun Discord: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bVerzija Slimefuna: &7%version%'
+    title: '&b%addon% informacije'
+crafting:
+  invalid-recipe: '&cNevažeći recept!'
+  no-room: '&6Nema dovoljno mjesta!'
+  success: '&aUspješno izrađeno: %item%'

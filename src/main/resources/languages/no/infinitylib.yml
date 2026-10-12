@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: lister opp tilgjengelige aliaser for denne kommandoen
+    message: 'Aliaser for /%cmd%: %aliases%'
+  help:
+    description: Viser dette
+    header: '&7----------&b /%cmd% Hjelp &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bTilleggsfellesskap: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bTilleggsversjon: &7%version%'
+    description: Oppgir versjon av tillegget og Slimefun samt Discord-lenker
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bSlimefun Discord: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bSlimefun-versjon: &7%version%'
+    title: '&bInfo om %addon%'
+crafting:
+  invalid-recipe: '&cUgyldig oppskrift!'
+  no-room: '&6Ikke nok plass!'
+  success: '&aVellykket laget: %item%'

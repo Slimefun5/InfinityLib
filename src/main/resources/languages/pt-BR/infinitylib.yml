@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: lista os apelidos disponíveis para este comando
+    message: 'Apelidos de /%cmd%: %aliases%'
+  help:
+    description: Mostra esta ajuda
+    header: '&7----------&b Ajuda de /%cmd% &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bComunidade do Addon: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bVersão do Addon: &7%version%'
+    description: Fornece a versão do addon e do Slimefun e os links do Discord
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bDiscord do Slimefun: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bVersão do Slimefun: &7%version%'
+    title: '&bInformações do %addon%'
+crafting:
+  invalid-recipe: '&cReceita inválida!'
+  no-room: '&6Espaço insuficiente!'
+  success: '&aFabricado com sucesso: %item%'

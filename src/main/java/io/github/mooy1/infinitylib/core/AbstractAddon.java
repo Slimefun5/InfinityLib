@@ -146,6 +146,12 @@ public abstract class AbstractAddon extends JavaPlugin implements SlimefunAddon 
         // Set static instance
         instance = this;
 
+        // The addon's own file is registered first so its wording wins: InfinityLib is shaded into
+        // the consumer's jar, where relocate() rewrites packages but not resource paths, so the
+        // framework's defaults must live under a distinct name to avoid overwriting the addon's.
+        Slimefun.getAddonMessageService().registerTranslations(this);
+        Slimefun.getAddonMessageService().registerTranslations(this, "infinitylib.yml");
+
         // This is used to mark when the config is broken, so we should always auto update
         boolean brokenConfig = false;
 

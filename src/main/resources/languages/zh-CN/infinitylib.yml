@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: 列出此命令可用的别名
+    message: /%cmd% 的别名：%aliases%
+  help:
+    description: 显示此帮助
+    header: '&7----------&b /%cmd% 帮助 &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&b扩展社区：&7discord.gg/CbBYZBEWdR'
+    addon-version: '&b扩展版本：&7%version%'
+    description: 提供扩展和 Slimefun 的版本以及 Discord 链接
+    github: '&bGithub：&7%url%'
+    slimefun-discord: '&bSlimefun Discord：&7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bSlimefun 版本：&7%version%'
+    title: '&b%addon% 信息'
+crafting:
+  invalid-recipe: '&c无效配方！'
+  no-room: '&6空间不足！'
+  success: '&a合成成功：%item%'

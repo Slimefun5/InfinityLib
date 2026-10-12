@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: نام‌های جایگزین موجود برای این فرمان را فهرست می‌کند
+    message: 'نام‌های جایگزین /%cmd%: %aliases%'
+  help:
+    description: این را نشان می‌دهد
+    header: '&7----------&b راهنمای /%cmd% &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bانجمن افزونه: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bنسخهٔ افزونه: &7%version%'
+    description: نسخهٔ افزونه و Slimefun و پیوندهای دیسکورد را می‌دهد
+    github: '&bگیت‌هاب: &7%url%'
+    slimefun-discord: '&bدیسکورد Slimefun: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bنسخهٔ Slimefun: &7%version%'
+    title: '&bاطلاعات %addon%'
+crafting:
+  invalid-recipe: '&cدستور ساخت نامعتبر!'
+  no-room: '&6جای کافی نیست!'
+  success: '&aبا موفقیت ساخته شد: %item%'

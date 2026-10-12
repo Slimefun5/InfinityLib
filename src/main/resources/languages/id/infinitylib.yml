@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: mencantumkan alias yang tersedia untuk perintah ini
+    message: 'Alias untuk /%cmd%: %aliases%'
+  help:
+    description: Menampilkan ini
+    header: '&7----------&b /%cmd% Bantuan &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bKomunitas Pengaya: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bVersi Pengaya: &7%version%'
+    description: Memberikan versi pengaya dan slimefun serta tautan discord
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bDiscord Slimefun: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bVersi Slimefun: &7%version%'
+    title: '&bInfo %addon%'
+crafting:
+  invalid-recipe: '&cResep Tidak Valid!'
+  no-room: '&6Ruang Tidak Cukup!'
+  success: '&aBerhasil Dibuat: %item%'

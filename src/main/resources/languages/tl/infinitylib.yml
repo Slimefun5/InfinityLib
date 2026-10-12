@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: inililista ang mga magagamit na alyas para sa utos na ito
+    message: 'Mga alyas para sa /%cmd%: %aliases%'
+  help:
+    description: Ipinapakita ito
+    header: '&7----------&b /%cmd% Tulong &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bKomunidad ng Dagdag: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bBersyon ng Dagdag: &7%version%'
+    description: Nagbibigay ng bersyon ng dagdag at ng Slimefun at mga link sa Discord
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bDiscord ng Slimefun: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bBersyon ng Slimefun: &7%version%'
+    title: '&bImpormasyon ng %addon%'
+crafting:
+  invalid-recipe: '&cHindi Tamang Resipi!'
+  no-room: '&6Kulang ang Espasyo!'
+  success: '&aMatagumpay na Nalikha: %item%'

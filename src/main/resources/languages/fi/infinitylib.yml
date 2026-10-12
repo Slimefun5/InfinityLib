@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: listaa tämän komennon käytettävissä olevat aliakset
+    message: 'Komennon /%cmd% aliakset: %aliases%'
+  help:
+    description: Näyttää tämän
+    header: '&7----------&b /%cmd% Ohje &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bLisäosan yhteisö: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bLisäosan versio: &7%version%'
+    description: Antaa lisäosan ja Slimefunin version sekä Discord-linkit
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bSlimefun Discord: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bSlimefun-versio: &7%version%'
+    title: '&b%addon%-tiedot'
+crafting:
+  invalid-recipe: '&cVirheellinen resepti!'
+  no-room: '&6Ei tarpeeksi tilaa!'
+  success: '&aValmistettu onnistuneesti: %item%'

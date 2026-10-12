@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: vypíše dostupné zkratky tohoto příkazu
+    message: 'Zkratky pro /%cmd%: %aliases%'
+  help:
+    description: Zobrazí tuto nápovědu
+    header: '&7----------&b Nápověda /%cmd% &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bKomunita doplňku: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bVerze doplňku: &7%version%'
+    description: Zobrazí verzi doplňku a Slimefunu a odkazy na Discord
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bDiscord Slimefunu: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bVerze Slimefunu: &7%version%'
+    title: '&bInformace o %addon%'
+crafting:
+  invalid-recipe: '&cNeplatný recept!'
+  no-room: '&6Nedostatek místa!'
+  success: '&aÚspěšně vyrobeno: %item%'

@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: показує доступні псевдоніми для цієї команди
+    message: 'Псевдоніми для /%cmd%: %aliases%'
+  help:
+    description: Показує це
+    header: '&7----------&b /%cmd% Довідка &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bСпільнота аддона: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bВерсія аддона: &7%version%'
+    description: Показує версію аддона та Slimefun, а також посилання на Discord
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bSlimefun Discord: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bВерсія Slimefun: &7%version%'
+    title: '&b%addon% Інформація'
+crafting:
+  invalid-recipe: '&cНевірний рецепт!'
+  no-room: '&6Недостатньо місця!'
+  success: '&aУспішно скрафчено: %item%'

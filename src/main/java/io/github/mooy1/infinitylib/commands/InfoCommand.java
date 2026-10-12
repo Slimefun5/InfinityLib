@@ -5,34 +5,44 @@ import java.util.List;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.command.CommandSender;
+import org.bukkit.plugin.java.JavaPlugin;
 
 import io.github.thebusybiscuit.slimefun5.api.SlimefunAddon;
+import io.github.thebusybiscuit.slimefun5.core.services.localization.AddonMessageService;
 import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
-import io.github.thebusybiscuit.slimefun5.libraries.dough.common.ChatColors;
 
 @ParametersAreNonnullByDefault
 final class InfoCommand extends SubCommand {
 
-    private final String[] message;
+    private final SlimefunAddon addon;
+    private final String slimefunVersion;
 
     InfoCommand(SlimefunAddon addon) {
-        super("info", "Gives addon and slimefun version and discord links");
+        super("info", "commands.info.description", "Gives addon and slimefun version and discord links", false);
+        this.addon = addon;
         Slimefun slimefun = Slimefun.instance();
-        message = new String[] {
-                "",
-                ChatColors.color("&b" + addon.getName() + " Info"),
-                ChatColors.color("&bSlimefun Version: &7" + (slimefun == null ? "null" : slimefun.getPluginVersion())),
-                ChatColors.color("&bSlimefun Discord: &7discord.gg/CbBYZBEWdR"),
-                ChatColors.color("&bAddon Version: &7" + addon.getPluginVersion()),
-                ChatColors.color("&bAddon Community: &7discord.gg/CbBYZBEWdR"),
-                ChatColors.color("&bGithub: &7" + addon.getBugTrackerURL()),
-                ""
-        };
+        this.slimefunVersion = slimefun == null ? "null" : slimefun.getPluginVersion();
     }
 
     @Override
     protected void execute(CommandSender sender, String[] args) {
-        sender.sendMessage(message);
+        AddonMessageService messages = Slimefun.getAddonMessageService();
+        JavaPlugin plugin = addon.getJavaPlugin();
+
+        sender.sendMessage("");
+        messages.sendMessage(sender, plugin, "commands.info.title",
+                "&b%addon% Info", line -> line.replace("%addon%", addon.getName()));
+        messages.sendMessage(sender, plugin, "commands.info.slimefun-version",
+                "&bSlimefun Version: &7%version%", line -> line.replace("%version%", slimefunVersion));
+        messages.sendMessage(sender, plugin, "commands.info.slimefun-discord",
+                "&bSlimefun Discord: &7discord.gg/CbBYZBEWdR");
+        messages.sendMessage(sender, plugin, "commands.info.addon-version",
+                "&bAddon Version: &7%version%", line -> line.replace("%version%", addon.getPluginVersion()));
+        messages.sendMessage(sender, plugin, "commands.info.addon-community",
+                "&bAddon Community: &7discord.gg/CbBYZBEWdR");
+        messages.sendMessage(sender, plugin, "commands.info.github",
+                "&bGithub: &7%url%", line -> line.replace("%url%", addon.getBugTrackerURL()));
+        sender.sendMessage("");
     }
 
     @Override

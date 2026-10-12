@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: ги наведува достапните алијаси за оваа команда
+    message: 'Алијаси за /%cmd%: %aliases%'
+  help:
+    description: Го прикажува ова
+    header: '&7----------&b /%cmd% Помош &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bЗаедница на додатокот: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bВерзија на додатокот: &7%version%'
+    description: Ја дава верзијата на додатокот и на Slimefun и линковите до Discord
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bDiscord на Slimefun: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bВерзија на Slimefun: &7%version%'
+    title: '&bИнформации за %addon%'
+crafting:
+  invalid-recipe: '&cНеважечки рецепт!'
+  no-room: '&6Нема доволно место!'
+  success: '&aУспешно изработено: %item%'

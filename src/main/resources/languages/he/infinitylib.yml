@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: מציג את הכינויים הזמינים לפקודה זו
+    message: 'כינויים ל-/%cmd%: %aliases%'
+  help:
+    description: מציג מסך זה
+    header: '&7----------&b עזרת /%cmd% &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bקהילת התוסף: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bגרסת התוסף: &7%version%'
+    description: מציג את גרסת התוסף ואת גרסת Slimefun וקישורי דיסקורד
+    github: '&bגיטהאב: &7%url%'
+    slimefun-discord: '&bדיסקורד של Slimefun: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bגרסת Slimefun: &7%version%'
+    title: '&bמידע על %addon%'
+crafting:
+  invalid-recipe: '&cמתכון שגוי!'
+  no-room: '&6אין מספיק מקום!'
+  success: '&aנוצר בהצלחה: %item%'

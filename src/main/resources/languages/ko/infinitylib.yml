@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: 이 명령어에서 쓸 수 있는 별칭을 나열합니다
+    message: '/%cmd% 의 별칭: %aliases%'
+  help:
+    description: 이 도움말을 표시합니다
+    header: '&7----------&b /%cmd% 도움말 &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&b애드온 커뮤니티: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&b애드온 버전: &7%version%'
+    description: 애드온과 Slimefun 버전, 디스코드 링크를 알려줍니다
+    github: '&b깃허브: &7%url%'
+    slimefun-discord: '&bSlimefun 디스코드: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bSlimefun 버전: &7%version%'
+    title: '&b%addon% 정보'
+crafting:
+  invalid-recipe: '&c잘못된 조합법입니다!'
+  no-room: '&6공간이 부족합니다!'
+  success: '&a제작 완료: %item%'

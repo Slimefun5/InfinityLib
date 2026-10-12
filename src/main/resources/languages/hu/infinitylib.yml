@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: felsorolja a parancshoz elérhető aliasokat
+    message: 'A /%cmd% aliasai: %aliases%'
+  help:
+    description: Ezt jeleníti meg
+    header: '&7----------&b /%cmd% Súgó &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bKiegészítő közössége: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bKiegészítő verziója: &7%version%'
+    description: Megadja a kiegészítő és a Slimefun verzióját, valamint a Discord-linkeket
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bSlimefun Discord: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bSlimefun verzió: &7%version%'
+    title: '&b%addon% Infó'
+crafting:
+  invalid-recipe: '&cÉrvénytelen recept!'
+  no-room: '&6Nincs elég hely!'
+  success: '&aSikeresen barkácsolva: %item%'

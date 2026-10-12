@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.command.CommandSender;
@@ -30,6 +31,16 @@ public class ParentCommand extends SubCommand {
 
     public ParentCommand(String name, String description) {
         super(name, description);
+        addSub(helpCommand);
+    }
+
+    public ParentCommand(String name, @Nullable String descriptionKey, String description, String perm) {
+        super(name, descriptionKey, description, perm);
+        addSub(helpCommand);
+    }
+
+    public ParentCommand(String name, @Nullable String descriptionKey, String description, boolean op) {
+        super(name, descriptionKey, description, op);
         addSub(helpCommand);
     }
 

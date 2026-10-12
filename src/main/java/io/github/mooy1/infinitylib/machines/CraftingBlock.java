@@ -7,7 +7,6 @@ import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
-import org.bukkit.ChatColor;
 import org.bukkit.Material;
 import io.github.thebusybiscuit.slimefun5.libraries.xseries.XMaterial;
 import org.bukkit.block.Block;
@@ -17,6 +16,7 @@ import org.bukkit.inventory.ItemStack;
 import io.github.thebusybiscuit.slimefun5.api.items.ItemGroup;
 import io.github.thebusybiscuit.slimefun5.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun5.api.recipes.RecipeType;
+import io.github.thebusybiscuit.slimefun5.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemStackSnapshot;
 import io.github.thebusybiscuit.slimefun5.libraries.dough.items.ItemUtils;
@@ -55,13 +55,14 @@ public class CraftingBlock extends MenuBlock {
                     onSuccessfulCraft(menu, output);
                     menu.pushItem(output, layout.outputSlots());
                     recipe.consume(input);
-                    p.sendMessage(ChatColor.GREEN + "Successfully Crafted: " + ItemUtils.getItemName(output));
+                    Slimefun.getAddonMessageService().sendMessage(p, getAddon().getJavaPlugin(), "crafting.success",
+                            "&aSuccessfully Crafted: %item%", line -> line.replace("%item%", ItemUtils.getItemName(output)));
                 } else {
-                    p.sendMessage(ChatColor.GOLD + "Not Enough Room!");
+                    Slimefun.getAddonMessageService().sendMessage(p, getAddon().getJavaPlugin(), "crafting.no-room", "&6Not Enough Room!");
                 }
             }
         } else {
-            p.sendMessage(ChatColor.RED + "Invalid Recipe!");
+            Slimefun.getAddonMessageService().sendMessage(p, getAddon().getJavaPlugin(), "crafting.invalid-recipe", "&cInvalid Recipe!");
         }
     }
 

@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.Locale;
 import java.util.function.Predicate;
 
+import javax.annotation.Nullable;
 import javax.annotation.ParametersAreNonnullByDefault;
 
 import org.bukkit.command.CommandSender;
@@ -18,24 +19,45 @@ public abstract class SubCommand {
 
     private final Predicate<CommandSender> permission;
     private final String description;
+    private final String descriptionKey;
     private final String name;
     private String fullName;
     ParentCommand parent;
 
     protected SubCommand(String name, String description, String perm) {
+        this(name, null, description, perm);
+    }
+
+    protected SubCommand(String name, String description, boolean op) {
+        this(name, null, description, op);
+    }
+
+    protected SubCommand(String name, String description) {
+        this(name, null, description, false);
+    }
+
+    /**
+     * @param descriptionKey
+     *            The localization key resolved via {@code Slimefun.getAddonMessageService()}, or
+     *            null to always use the English {@code description} verbatim
+     */
+    protected SubCommand(String name, @Nullable String descriptionKey, String description, String perm) {
         this.name = name.toLowerCase(Locale.ROOT);
+        this.descriptionKey = descriptionKey;
         this.description = description;
         this.permission = sender -> sender.hasPermission(perm);
     }
 
-    protected SubCommand(String name, String description, boolean op) {
+    /**
+     * @param descriptionKey
+     *            The localization key resolved via {@code Slimefun.getAddonMessageService()}, or
+     *            null to always use the English {@code description} verbatim
+     */
+    protected SubCommand(String name, @Nullable String descriptionKey, String description, boolean op) {
         this.name = name.toLowerCase(Locale.ROOT);
+        this.descriptionKey = descriptionKey;
         this.description = description;
         this.permission = op ? CommandSender::isOp : sender -> true;
-    }
-
-    protected SubCommand(String name, String description) {
-        this(name, description, false);
     }
 
     protected abstract void execute(CommandSender sender, String[] args);
@@ -52,6 +74,11 @@ public abstract class SubCommand {
 
     public final String description() {
         return description;
+    }
+
+    @Nullable
+    public final String descriptionKey() {
+        return descriptionKey;
     }
 
     String fullName() {

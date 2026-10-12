@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: listează aliasurile disponibile pentru această comandă
+    message: 'Aliasuri pentru /%cmd%: %aliases%'
+  help:
+    description: Afișează acest mesaj
+    header: '&7----------&b /%cmd% Ajutor &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bComunitate addon: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bVersiune addon: &7%version%'
+    description: Oferă versiunea addonului și a Slimefun și linkurile de discord
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bDiscord Slimefun: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bVersiune Slimefun: &7%version%'
+    title: '&bInfo %addon%'
+crafting:
+  invalid-recipe: '&cRețetă invalidă!'
+  no-room: '&6Nu este destul spațiu!'
+  success: '&aFabricat cu succes: %item%'

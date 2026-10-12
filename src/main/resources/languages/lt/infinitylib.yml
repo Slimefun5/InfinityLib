@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: išvardija galimus šios komandos alternatyvius pavadinimus
+    message: '/%cmd% alternatyvūs pavadinimai: %aliases%'
+  help:
+    description: Parodo tai
+    header: '&7----------&b /%cmd% pagalba &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bPriedo bendruomenė: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bPriedo versija: &7%version%'
+    description: Pateikia priedo ir Slimefun versiją bei Discord nuorodas
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bSlimefun Discord: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bSlimefun versija: &7%version%'
+    title: '&b%addon% informacija'
+crafting:
+  invalid-recipe: '&cNetinkamas receptas!'
+  no-room: '&6Nepakanka vietos!'
+  success: '&aSėkmingai pagaminta: %item%'

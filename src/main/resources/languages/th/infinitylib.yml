@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: แสดงรายการชื่อย่อที่ใช้ได้ของคำสั่งนี้
+    message: 'ชื่อย่อของ /%cmd%: %aliases%'
+  help:
+    description: แสดงข้อความนี้
+    header: '&7----------&b ช่วยเหลือ /%cmd% &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bชุมชนส่วนเสริม: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bเวอร์ชันส่วนเสริม: &7%version%'
+    description: แสดงเวอร์ชันของส่วนเสริมและ Slimefun พร้อมลิงก์ดิสคอร์ด
+    github: '&bกิตฮับ: &7%url%'
+    slimefun-discord: '&bดิสคอร์ด Slimefun: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bเวอร์ชัน Slimefun: &7%version%'
+    title: '&bข้อมูล %addon%'
+crafting:
+  invalid-recipe: '&cสูตรไม่ถูกต้อง!'
+  no-room: '&6พื้นที่ไม่เพียงพอ!'
+  success: '&aคราฟต์สำเร็จ: %item%'

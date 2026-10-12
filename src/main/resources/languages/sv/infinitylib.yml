@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: listar tillgängliga alias för detta kommando
+    message: 'Alias för /%cmd%: %aliases%'
+  help:
+    description: Visar detta
+    header: '&7----------&b /%cmd% Hjälp &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bTilläggets gemenskap: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bTilläggsversion: &7%version%'
+    description: Ger tilläggets och Slimefuns version samt Discord-länkar
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bSlimefun Discord: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bSlimefun-version: &7%version%'
+    title: '&b%addon%-info'
+crafting:
+  invalid-recipe: '&cOgiltigt recept!'
+  no-room: '&6Inte tillräckligt med plats!'
+  success: '&aTillverkning lyckades: %item%'

@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: මෙම විධානය සඳහා ඇති අන්වර්ථ නම් ලැයිස්තුගත කරයි
+    message: '/%cmd% සඳහා අන්වර්ථ නම්: %aliases%'
+  help:
+    description: මෙය පෙන්වයි
+    header: '&7----------&b /%cmd% උපකාරය &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bඅතිරේක ප්‍රජාව: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bඅතිරේක අනුවාදය: &7%version%'
+    description: අතිරේකයේ සහ Slimefun අනුවාදය සහ ඩිස්කෝඩ් සබැඳි ලබා දෙයි
+    github: '&bගිට්හබ්: &7%url%'
+    slimefun-discord: '&bSlimefun ඩිස්කෝඩ්: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bSlimefun අනුවාදය: &7%version%'
+    title: '&b%addon% තොරතුරු'
+crafting:
+  invalid-recipe: '&cඅවලංගු වට්ටෝරුවක්!'
+  no-room: '&6ප්‍රමාණවත් ඉඩ නැත!'
+  success: '&aසාර්ථකව තැනුවා: %item%'

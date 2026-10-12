@@ -1,0 +1,20 @@
+commands:
+  aliases:
+    description: liệt kê các tên gọi thay thế có sẵn cho lệnh này
+    message: 'Tên gọi thay thế cho /%cmd%: %aliases%'
+  help:
+    description: Hiển thị nội dung này
+    header: '&7----------&b Trợ giúp /%cmd% &7----------'
+    line: /%sub%&e - %description%
+  info:
+    addon-community: '&bCộng đồng bản mở rộng: &7discord.gg/CbBYZBEWdR'
+    addon-version: '&bPhiên bản bản mở rộng: &7%version%'
+    description: Cho biết phiên bản của bản mở rộng và slimefun cùng các liên kết discord
+    github: '&bGithub: &7%url%'
+    slimefun-discord: '&bDiscord Slimefun: &7discord.gg/CbBYZBEWdR'
+    slimefun-version: '&bPhiên bản Slimefun: &7%version%'
+    title: '&bThông tin %addon%'
+crafting:
+  invalid-recipe: '&cCông thức không hợp lệ!'
+  no-room: '&6Không đủ chỗ!'
+  success: '&aChế tạo thành công: %item%'
