@@ -42,7 +42,7 @@ repositories {
 
 dependencies {
     // Java-8 core jar (bundles relocated dough); Spigot 1.16.5 floor is the newest API in Java-8 bytecode with PDC.
-    githubCompileOnly("Slimefun5:Slimefun5:${project.findProperty("sfCoreVersion") ?: "5.3.3.3"}")
+    githubCompileOnly("Slimefun5:Slimefun5:${project.findProperty("sfCoreVersion") ?: "5.3.3.4"}")
     compileOnly("org.spigotmc:spigot-api:1.16.5-R0.1-SNAPSHOT")
     compileOnly("com.google.code.findbugs:jsr305:3.0.2")
 
